@@ -9,12 +9,11 @@ blue and yellow are for coil B
 
 other order could be red green, blue and yellow
 
-	 motor
-______________
-|			       |
-X	  X	     X 	X
+     motor
+._____________.
+  |	     |
+X   X	   X   X
 |_B_|      |_A_|
-      
 Y   B      G   R
 
 
@@ -81,8 +80,9 @@ _________________________________________________
 idLlave(decimal) + " " + horas(decimal) + ":" + minutos(decimal) + ":" + segundos(decimal)
 
 
-# define led      13
-# define boton    12
+.# define led      13
+
+.# define boton    12
 
 
 void setup()
@@ -108,6 +108,7 @@ void loop()
   }
 
 }
+
 
 [DESVIACION_HIGH]
 [DESVIACION_LOW]
