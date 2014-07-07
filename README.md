@@ -19,11 +19,15 @@ Y   B      G   R
 
 
 long ta = 3e6;     // acceleration time (microsec)3000000.0
+
 long td = 3e6;     // decelleration time (microsec)3000000.0
+
 long Vm = 1600;    // steady state velocity (pulse/sec)
+
 long Pt = 320880;  // total number of pulses for move (1600 steps per rev)
 
 tamaño del carro 95 cm  aprox 144000 steps is the half of distance
+
 45 cm == 42 
 
 
@@ -34,34 +38,34 @@ tamaño del carro 95 cm  aprox 144000 steps is the half of distance
 
 150 dly es lo maximo que lo puedo arrancar
 
-_________________________________________________
-|			arduino Valores						                |
-|_______________________________________________|
-|						LEDS					                      |
-|			D5	rojo	up lef					                |
-|			D6	verde	up lef					                |
-|			D7 	rojo	up right				                |
-|			D8	verde	up right				                |
-|			D9	rojo	down lef				                |
-|			D10	verde	down lef				                |
-|			D11	rojo	down right				              |
-|			D12	verde	down right				              |
-|					SENSOR "DISTANCIA"			              |
-|			D2 									                      |
-|			gnd 								                      |
-|			5v 									                      |
-|					ACELEROMETRO/GYRO			                |
-|			5v									                      |
-|			gnd									                      |
-|			A4	SCL								                    |
-|			A5	SCA								                    |
-|						MOTOR 					                    |
-|			D13									                      |
-|						TRTGGER					                    |
-|			D3 									                      |               
-|						LASER					                      |			
-|			D4									                      |
-|_______________________________________________|
+
+			arduino Valores
+_____________________________________________
+						LEDS				
+			D5	rojo	up lef	
+			D6	verde	up lef					                
+			D7 	rojo	up right				                
+			D8	verde	up right				                
+			D9	rojo	down lef				                
+			D10	verde	down lef				                
+			D11	rojo	down right				              
+			D12	verde	down right				              
+					SENSOR "DISTANCIA"			              
+			D2 									                      
+			gnd 								                      
+			5v 									                      
+					ACELEROMETRO/GYRO			                
+			5v									                      
+			gnd									                      
+			A4	SCL								                    
+			A5	SCA								                    
+						MOTOR 					                    
+			D13									                      
+						TRTGGER					                    
+			D3 									                                     
+						LASER					                      			
+			D4									                      
+
 
 
 _________________________________________________
@@ -77,8 +81,8 @@ _________________________________________________
 idLlave(decimal) + " " + horas(decimal) + ":" + minutos(decimal) + ":" + segundos(decimal)
 
 
-#define led      13
-#define boton    12
+# define led      13
+# define boton    12
 
 
 void setup()
@@ -86,18 +90,23 @@ void setup()
   pinMode(led, OUTPUT);
   pinMode(boton, INPUT);
 }
+
 void loop()
 {
+
   int val = 0;
   val = digitalRead(boton);
+
   if(val == 0)
   {
     digitalWrite(led,LOW);
   }
+
   if (val == 1)
   {
     digitalWrite(led,HIGH);
   }
+
 }
 
 [DESVIACION_HIGH]
